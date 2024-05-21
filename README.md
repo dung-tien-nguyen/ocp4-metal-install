@@ -267,6 +267,11 @@
    ```bash
    dnf install dhcp-server -y
    ```
+   For Centos 7 - Install the DHCP Server
+
+   ```bash
+   dnf install dhcp -y
+   ```
 
    Edit dhcpd.conf from the cloned git repo to have the correct mac address for each host and copy the conf file to the correct location for the DHCP service to use
 
