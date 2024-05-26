@@ -429,11 +429,11 @@
    cp ~/ocp4-metal-install/install-config.yaml ~/ocp-install
    ```
 
-1. Update the install-config.yaml with your own pull-secret and ssh key.
+1. Update the install-config.yaml with your own pull-secret, ssh key and networking.networkType.
 
    - Line 23 should contain the contents of your pull-secret.txt
    - Line 24 should contain the contents of your '~/.ssh/id_rsa.pub'
-
+   - `networking.networkType`: Change `OpenShiftSDN` to `OVNKubernetes`
    ```bash
    vim ~/ocp-install/install-config.yaml
    ```
