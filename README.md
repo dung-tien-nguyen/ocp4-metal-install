@@ -410,7 +410,7 @@
    ```
 
 ## Generate and host install files
-
+Do cert sẽ hết hạn sau 1 ngày, do đó từ lúc tạo pull-secret, gen config bootstrap đến lúc khởi tạo cụm thành công cần thực hiện trong vòng 1 ngày (tốt nhất là dưới 12h).
 1. Generate an SSH key pair keeping all default options
 
    ```bash
