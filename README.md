@@ -670,7 +670,7 @@ Do cert sẽ hết hạn sau 1 ngày, do đó từ lúc tạo pull-secret, gen c
    ```bash
    ./openshift-install gather bootstrap --dir ocp-install --bootstrap=192.168.22.200 --master=192.168.22.201 --master=192.168.22.202 --master=192.168.22.203
    ```
-
+1. Khi bootstrap, các node sẽ lấy thông tin ignition từ bootstrap node. Sau khi các node master running thành công, các node worker sẽ gọi đến master để lấy thông tin ignition thông qua đường dẫn https://api-int.lab.ocp.lan:6443/config/worker. 
 1. Modify the role of the Control Plane Nodes
 
    If you would like to schedule workloads on the Control Plane nodes apply the 'worker' role by changing the value of 'mastersSchedulable' to true.
