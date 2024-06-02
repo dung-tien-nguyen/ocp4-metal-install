@@ -43,7 +43,8 @@
 1. Copy the CentOS 8 iso to an ESXi datastore
 1. Create a new Port Group called 'OCP' under Networking
     - (In case of VirtualBox choose "Internal Network" when creating each VM and give it the same name. ocp for instance)
-    - (In case of ProxMox you may use the same network bridge and choose a specific VLAN tag. 50 for instance) 
+    - (In case of ProxMox you may use the same network bridge and choose a specific VLAN tag. 50 for instance)
+1. Trong trường hợp cần sử dụng CSI, với máy chủ là các VM triển khai trên 1 nền tảng ảo hoả (vSphere, proxmox, openstack,..) Cần đặt tên hostname các máy chủ theo đúng chuẩn, để đảm bảo có thể mount volume vào được máy chủ, ví dụ:  ocp-cp-#.lab.ocp.lan, ocp-w-#.lab.ocp.lan . Với Bare-metal, hoặc sử dụng các giải pháp storage không cần quan tâm đến hostname như NFS CSI, NFS Provisioner, Ceph,.. có thể không cần quan tâm đến yêu cầu trên.
 1. Create 3 Control Plane virtual machines with minimum settings:
    - Name: ocp-cp-# (Example ocp-cp-1)
    - 4vcpu
